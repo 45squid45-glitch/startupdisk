@@ -1,7 +1,9 @@
 import os
 import ast
 import time
+import getpass
 
+username = getpass.getuser()
 file_path = "A:\launchcode.txt"  
 
 txtlaunchcode = None
@@ -20,10 +22,8 @@ while txtlaunchcode == None:
 if txtlaunchcode is not None:
     code = ast.literal_eval(txtlaunchcode)
 if str(code) == "netflix":
-    os.startfile(r"C:\Users\liz\Desktop\Netflix.lnk")
+    os.startfile(r"C:\Users\\" + username + r"\Desktop\Netflix.lnk")
 elif str(code) == "edge":
-    os.startfile(r"C:\Users\liz\Desktop\Personal - Edge.lnk")
+    os.startfile(r"C:\Users\\" + username + r"\Desktop\Personal - Edge.lnk")
 elif str(code) == "minecraft":
-    os.startfile(r"C:\Users\liz\Desktop\Minecraft for Windows.lnk")
-
-
+    os.startfile(r"C:\Users\\" + username + r"\Desktop\Minecraft for Windows.lnk")
